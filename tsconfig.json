@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "es5",
     "sourceMap": true,
-    "outDir": "dist/"
+    "outDir": "dist/",
+    "noEmitOnError": true,
+    "removeComments": true
   },
   "exclude": [
     "node_modules"
