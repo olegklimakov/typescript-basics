@@ -2,9 +2,14 @@
   "name": "teaching",
   "version": "0.0.1",
   "scripts": {
-    "tsc": "./node_modules/.bin/tsc"
+    "tsc": "./node_modules/.bin/tsc",
+    "types": "concurrently --kill-others \"tsc -w\" \"nodemon dist/1.types-usage.js\"",
+    "classes": "concurrently --kill-others \"tsc -w\" \"nodemon dist/2.classes.js\"",
+    "modules": "concurrently --kill-others \"tsc -w\" \"nodemon dist/3.module.js\""
   },
   "dependencies": {
+    "concurrently": "^3.5.1",
+    "nodemon": "^1.17.3",
     "typescript": "^2.3.3"
   }
 }
